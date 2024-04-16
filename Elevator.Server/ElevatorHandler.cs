@@ -13,6 +13,7 @@ public class ElevatorHandler
     public ElevatorHandler(ILogger<ElevatorHandler> logger)
     {
         _logger = logger;
+        _timer.Interval = 1000;
         _timer.Enabled = false;
         _timer.Elapsed += TimerOnElapsed;
     }
